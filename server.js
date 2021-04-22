@@ -10,8 +10,13 @@ const express = require("express");
 const hbs = require("hbs");
 const app = express();
 const path = require("path");
+const mongoose = require("mongoose");
 
 hbs.registerPartials(__dirname + "/views/partials");
+mongoose.connect("mongodb://localhost:27017/myFaasDb", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 app
   .set("view engine", "hbs")
