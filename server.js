@@ -29,7 +29,7 @@ app
     res.redirect("/home");
   })
   .get("/home", (req, res) => {
-    res.render("home", { title: "Home" });
+    res.render("home", { title: "Home", register: false, cssFiles: ["register.css"] });
   });
 
 app.listen(8002, () => console.log("Server ready on localhost:8002"));

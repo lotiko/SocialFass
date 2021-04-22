@@ -1,1 +1,40 @@
-<h1>Hello all!!</h1>
+<main>
+  <!-- {{#if register}}
+{{else}} -->
+
+  <form action="" method="post">
+    <label
+      >Pseudo
+      <input type="text" name="username" />
+    </label>
+    <label>
+      Mot de passe
+      <input type="text" name="password" />
+    </label>
+    <label
+      >Confirme mot de passe
+      <input type="text" name="confirm" />
+    </label>
+    <label>
+      Mail
+      <input type="email" name="mail" />
+    </label>
+    <label>
+      Avatar
+      <input type="image" src="" alt="" />
+    </label>
+    <div id="captcha">
+      <h1>Captcha</h1>
+      <p>Clic sur le fruit: <span id="img-to-find"></span>.</p>
+      <canvas id="c1" width="40" height="40"></canvas>
+      <canvas id="c2" width="40" height="40"></canvas>
+      <canvas id="c3" width="40" height="40"></canvas>
+      <canvas id="c4" width="40" height="40"></canvas>
+      <canvas id="c5" width="40" height="40"></canvas>
+    </div>
+    <input id="submit-btn" hidden type="submit" value="S'enregister" />
+  </form>
+
+  <!-- {{/if}} -->
+</main>
+<script src="/js/captcha.js"></script>
