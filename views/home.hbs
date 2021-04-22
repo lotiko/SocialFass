@@ -2,26 +2,43 @@
   <!-- {{#if register}}
 {{else}} -->
 
-  <form action="" method="post">
+  <form action="/register" method="post">
     <label
       >Pseudo
-      <input type="text" name="username" />
+      <input
+        type="text"
+        name="username"
+        pattern="^.{1,10}$"
+        title="Maximum 10 caractères"
+        required
+      />
+      <p>Maximum 10 caractères.</p>
     </label>
     <label>
       Mot de passe
-      <input type="text" name="password" />
+      <input
+        type="password"
+        name="password"
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,100}$"
+        title="Minimum 8 et maximum 100 caractères, au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial."
+        required
+      />
+      <p>
+        Minimum 8 et maximum 100 caractères, au moins une lettre majuscule, une lettre minuscule, un
+        chiffre et un caractère spécial.
+      </p>
     </label>
     <label
       >Confirme mot de passe
-      <input type="text" name="confirm" />
+      <input type="password" name="confirm" required />
     </label>
     <label>
       Mail
-      <input type="email" name="mail" />
+      <input type="email" name="mail" required />
     </label>
     <label>
       Avatar
-      <input type="image" src="" alt="" />
+      <input type="file" name="avatar" accept=".png, .jpeg" />
     </label>
     <div id="captcha">
       <h1>Captcha</h1>
@@ -38,3 +55,4 @@
   <!-- {{/if}} -->
 </main>
 <script src="/js/captcha.js"></script>
+<script src="/js/checkRegisterForm.js"></script>

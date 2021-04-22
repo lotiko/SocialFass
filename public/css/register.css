@@ -10,10 +10,17 @@ main {
 form {
   margin: auto;
 }
-input {
-  width: 15em;
+input:not([name="avatar"]),
+form p {
+  width: 15rem;
+  margin-left: 0;
+}
+form p:not(#captcha > p) {
+  width: 25rem;
+  font-size: 0.7rem;
 }
 label {
+  width: 25rem;
   display: flex;
   flex-direction: column;
 }
