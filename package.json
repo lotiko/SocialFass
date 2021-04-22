@@ -4,7 +4,8 @@
   "description": "Library and function can be save on site and call by http",
   "main": "server.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/lotiko/SocialFass#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "hbs": "^4.1.2",
     "mocha": "^8.3.2",
     "nodemon": "^2.0.7"
   }
